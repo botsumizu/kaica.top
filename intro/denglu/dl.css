@@ -1,0 +1,158 @@
+body
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../img/nanhai.jpg);
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    overflow: hidden;
+}
+body::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../nanhai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    filter: blur(0);
+    z-index: -1;
+    transition: 2s ease;
+    animation: bg_blur 2s ease forwards 1s;
+}
+@keyframes bg_blur
+{
+    from
+    {
+        filter: blur(0);
+    }
+    to
+    {
+        filter: blur(5px);
+    }         
+}
+.container
+{
+    position: absolute;
+    top: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 80%;
+    height: 80%;
+    border-radius: 6px;
+    border: 3px solid rgba(0, 0, 0, .6);
+    overflow: auto;
+}        
+#title
+{
+    color: rgba(0, 0, 0, .8);
+    font-size: 45px;
+    font-family: "黑体";
+    font-weight: bold;
+}
+#subtitle
+{
+    color: rgba(0, 0, 0, .7);
+    font-size: 35px;
+    font-family: "黑体";
+    font-weight: bold;
+}
+#small
+{
+    color: rgba(64, 64, 64, 0.6);
+    font-size: 15px;
+    font-family: "宋体";
+}
+#paragraph
+{
+    color: rgba(0, 0, 0, .7);
+    font-size: 20px;
+    font-family: "黑体";
+}
+.button_area
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.back_to_homepage
+{
+    position: absolute;
+    bottom: 50px;
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(40, 180, 255, 0.8);
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    font-size: 20px;
+    font-family: "黑体";
+    text-decoration: none;
+    border-radius: 20px;
+    padding-left: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.back_to_homepage span
+{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: rgba(225, 225, 225, 0.65);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+    overflow: hidden;
+}
+.back_to_homepage img
+{
+    height: 52px;
+}
+.back_to_homepage:after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index:1;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-200px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+}
+.back_to_homepage:hover
+{
+    padding-left: 0;
+    padding-right: 40px;
+    background: linear-gradient(rgba(153,153,255,.65),rgba(255,153,153,.65));
+    cursor: pointer;
+}
+.back_to_homepage:hover span
+{
+    left: calc(100% - 55px)
+}
+.back_to_homepage:hover:after
+{
+    transform: translateX(200px) skewX(30deg);
+}

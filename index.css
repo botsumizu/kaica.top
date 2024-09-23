@@ -1,0 +1,287 @@
+a
+{
+    text-decoration: none;
+}
+body
+{
+    background-image: url(img/nanhai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: -1;
+}
+.title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 100%;
+}
+.title .title_title
+{
+    position: absolute;
+    color: rgba(0,0,0,.8);
+    font-size: 45px;
+    font-family: "黑体";
+}
+.title .title_slogan
+{
+    top: 200px;
+    position: absolute;
+    color: rgba(0,0,0,.5);
+    font-size: 32px;
+    font-family: "黑体";
+}
+.icon
+{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 47%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 2px solid rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.icon img
+{
+    height: 100%;
+    width: 100%;
+}
+.icon:hover img
+{
+    animation: img_rotate 1s linear forwards;
+}
+@keyframes img_rotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+#bg_intro
+{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    position: absolute;
+    top: -320px;
+    left: 20px;
+    font-size: 25px;
+    font-family: "黑体";
+    color: rgba(100%,100%,100%,.7);
+    transition: top 0.8s ease-out;
+}
+.start_button
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+    z-index: 0;
+}
+.drawCard
+{
+    position: relative;
+    top: 150px;
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(40, 180, 255, 0.8);
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    font-size: 20px;
+    font-family: "黑体";
+    text-decoration: none;
+    border-radius: 20px;
+    padding-left: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.drawCard span
+{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: rgba(225, 225, 225, 0.65);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+    overflow: hidden;
+}
+.drawCard img
+{
+    height: 50px;
+}
+.roll img
+{
+    height: 50px;
+}
+.about img
+{
+    height: 50px;
+}
+.roll
+{
+    position: relative;
+    top: 150px;
+    height: 60px;
+    width: 200px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(40, 180, 255, 0.8);
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    font-size: 20px;
+    font-family: "黑体";
+    text-decoration: none;
+    border-radius: 20px;
+    padding-left: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.roll span
+{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: rgba(225, 225, 225, 0.65);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+    overflow: hidden;
+}
+.about
+{
+    position: relative;
+    top: 150px;
+    height: 60px;
+    width: 200px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(40, 180, 255, 0.8);
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    font-size: 20px;
+    font-family: "黑体";
+    text-decoration: none;
+    border-radius: 20px;
+    padding-left: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.about span
+{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: rgba(225, 225, 225, 0.65);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+    overflow: hidden;
+}
+.drawCard:hover
+{
+    padding-left: 0;
+    padding-right: 40px;
+    background: linear-gradient(rgba(153,153,255,.65),rgba(255,153,153,.65));
+    cursor: pointer;
+}
+.drawCard:hover span 
+{
+    left: calc(100% - 55px)
+}
+.drawCard:after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index:1;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-200px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+}
+.drawCard:hover:after
+{
+    transform: translateX(200px) skewX(30deg);
+}
+.roll:hover
+{
+    padding-left: 0;
+    padding-right: 40px;
+    background: linear-gradient(rgba(153,153,255,.65),rgba(255,153,153,.65));
+    cursor: pointer;
+}
+.roll:hover span 
+{
+    left: calc(100% - 55px)
+}
+.roll:after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index:1;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-200px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+}
+.roll:hover:after
+{
+    transform: translateX(200px) skewX(30deg);
+}
+.about:hover
+{
+    padding-left: 0;
+    padding-right: 40px;
+    background: linear-gradient(rgba(153,153,255,.65),rgba(255,153,153,.65));
+    cursor: pointer;
+}
+.about:hover span 
+{
+    left: calc(100% - 55px)
+}
+.about:after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index:1;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-200px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+}
+.about:hover:after
+{
+    transform: translateX(200px) skewX(30deg);
+}
